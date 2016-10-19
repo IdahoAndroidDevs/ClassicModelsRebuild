@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    android:id="@+id/activity_customer_list"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,10 +8,42 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="meetup.idahoandroid.classicmodelsrebuild.CustomerListActivity">
+    tools:context=".CustomerListActivity">
 
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/customerListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/buttonClearList"
+        tools:listitem="@layout/viewholder_model_list"/>
+
+    <Button
+        android:id="@+id/buttonAddMore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Refresh"/>
+
+    <Button
+        android:id="@+id/buttonClearList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonAddMore"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Clear List"/>
+
+    <Button
+        android:id="@+id/buttonCreateNewCustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customerListView"
+        android:layout_alignRight="@+id/customerListView"
+        android:layout_alignEnd="@+id/customerListView"
+        android:text="+ Customer"/>
+
 </RelativeLayout>
