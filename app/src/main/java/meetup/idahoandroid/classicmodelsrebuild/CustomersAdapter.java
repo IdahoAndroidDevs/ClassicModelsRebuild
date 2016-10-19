@@ -9,10 +9,15 @@ import java.util.List;
 public class CustomersAdapter extends RecyclerView.Adapter<ModelListViewHolder> {
 
     private List<Customer> data;
+    private ModelListViewHolder.OnModelClickedListener onModelClickedListener;
+
+    public CustomersAdapter(ModelListViewHolder.OnModelClickedListener onModelClickedListener) {
+        this.onModelClickedListener = onModelClickedListener;
+    }
 
     @Override
     public ModelListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ModelListViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_model_list, parent, false));
+        return new ModelListViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_model_list, parent, false), onModelClickedListener);
     }
 
     @Override

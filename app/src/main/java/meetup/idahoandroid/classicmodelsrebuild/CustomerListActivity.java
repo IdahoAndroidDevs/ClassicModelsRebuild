@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class CustomerListActivity extends AppCompatActivity {
+public class CustomerListActivity extends AppCompatActivity implements ModelListViewHolder.OnModelClickedListener {
 
     @BindView(R.id.customerListView)
     RecyclerView recyclerView;
@@ -27,7 +28,7 @@ public class CustomerListActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new CustomersAdapter();
+        adapter = new CustomersAdapter(this);
         recyclerView.setAdapter(adapter);
 
         getData();
@@ -49,6 +50,12 @@ public class CustomerListActivity extends AppCompatActivity {
 
         adapter.setData(dummyList);
         adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onModelClicked(Customer customer) {
+        Toast.makeText(this, customer.getCustomerName() + " Clicked", Toast.LENGTH_SHORT).show();
+        // TODO: 10/18/16
     }
 
     @OnClick(R.id.buttonClearList)
