@@ -1,10 +1,13 @@
-package meetup.idahoandroid.classicmodelsrebuild;
+package meetup.idahoandroid.classicmodelsrebuild.landing;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import java.util.List;
+
+import meetup.idahoandroid.classicmodelsrebuild.R;
+import meetup.idahoandroid.classicmodelsrebuild.core.models.Customer;
 
 public class CustomersAdapter extends RecyclerView.Adapter<CustomerViewHolder> {
 

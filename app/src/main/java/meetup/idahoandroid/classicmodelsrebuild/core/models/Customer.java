@@ -1,4 +1,4 @@
-package meetup.idahoandroid.classicmodelsrebuild;
+package meetup.idahoandroid.classicmodelsrebuild.core.models;
 
 public class Customer {
 

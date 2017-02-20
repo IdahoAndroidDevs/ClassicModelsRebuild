@@ -1,4 +1,4 @@
-package meetup.idahoandroid.classicmodelsrebuild;
+package meetup.idahoandroid.classicmodelsrebuild.landing;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import meetup.idahoandroid.classicmodelsrebuild.R;
+import meetup.idahoandroid.classicmodelsrebuild.core.models.Customer;
 
 public class CustomerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 

@@ -1,4 +1,4 @@
-package meetup.idahoandroid.classicmodelsrebuild;
+package meetup.idahoandroid.classicmodelsrebuild.application;
 
 import android.app.Application;
 
@@ -18,6 +18,6 @@ public class ClassicModelsApplication extends Application {
     }
 
     private void setUpApplicationComponent() {
-        // TODO: 2/19/17  
+        // TODO: 2/19/17
     }
 }

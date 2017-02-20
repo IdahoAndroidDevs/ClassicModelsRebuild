@@ -1,4 +1,4 @@
-package meetup.idahoandroid.classicmodelsrebuild;
+package meetup.idahoandroid.classicmodelsrebuild.landing;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +13,8 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import meetup.idahoandroid.classicmodelsrebuild.R;
+import meetup.idahoandroid.classicmodelsrebuild.core.models.Customer;
 
 public class CustomerListActivity extends AppCompatActivity implements CustomerViewHolder.OnModelClickedListener {
 
