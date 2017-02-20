@@ -14,7 +14,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class CustomerListActivity extends AppCompatActivity implements ModelListViewHolder.OnModelClickedListener {
+public class CustomerListActivity extends AppCompatActivity implements CustomerViewHolder.OnModelClickedListener {
 
     @BindView(R.id.customerListView)
     RecyclerView recyclerView;

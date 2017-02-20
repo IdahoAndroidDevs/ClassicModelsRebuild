@@ -6,22 +6,22 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-public class CustomersAdapter extends RecyclerView.Adapter<ModelListViewHolder> {
+public class CustomersAdapter extends RecyclerView.Adapter<CustomerViewHolder> {
 
     private List<Customer> data;
-    private ModelListViewHolder.OnModelClickedListener onModelClickedListener;
+    private CustomerViewHolder.OnModelClickedListener onModelClickedListener;
 
-    public CustomersAdapter(ModelListViewHolder.OnModelClickedListener onModelClickedListener) {
+    public CustomersAdapter(CustomerViewHolder.OnModelClickedListener onModelClickedListener) {
         this.onModelClickedListener = onModelClickedListener;
     }
 
     @Override
-    public ModelListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ModelListViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_model_list, parent, false), onModelClickedListener);
+    public CustomerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new CustomerViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_model_list, parent, false), onModelClickedListener);
     }
 
     @Override
-    public void onBindViewHolder(ModelListViewHolder holder, int position) {
+    public void onBindViewHolder(CustomerViewHolder holder, int position) {
         holder.bindData(data.get(position));
     }
 

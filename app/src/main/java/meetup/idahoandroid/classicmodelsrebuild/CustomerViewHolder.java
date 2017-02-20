@@ -7,7 +7,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ModelListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+public class CustomerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
     @BindView(R.id.nameTextView)
     TextView nameTextView;
@@ -17,7 +17,7 @@ public class ModelListViewHolder extends RecyclerView.ViewHolder implements View
     private OnModelClickedListener clickedListener;
     private Customer currentCustomer;
 
-    public ModelListViewHolder(View itemView, OnModelClickedListener onModelClickedListener) {
+    public CustomerViewHolder(View itemView, OnModelClickedListener onModelClickedListener) {
         super(itemView);
         ButterKnife.bind(this, itemView);
 
